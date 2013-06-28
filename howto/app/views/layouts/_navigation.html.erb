@@ -1,4 +1,8 @@
-<ul class="nav">
-	<li class="active">HOME</li>
-	<li>NEW</li>
-</ul>
+<div class="navbar-wrapper">
+	<div class="navbar-inner">
+		<ul class="nav">
+			<li><%= link_to 'Home', entries_path %></li>
+			<li><%= link_to 'New', new_entry_path %></li>
+		</ul>
+	</div>
+</div>
