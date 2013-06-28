@@ -1,23 +1,26 @@
-<div class="container">
-<h1>Listing entries</h1>
+<h1>All Entries</h1>
 
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Author</th>
-    <th>Description</th>
-    <th>Tags</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+
 
 <% @entries.each do |entry| %>
   <tr>
+    <td><strong>Title:</strong></td>
     <td><%= entry.title %></td>
+  </tr>
+  <tr>
+    <td><strong>Author:</strong></td>
     <td><%= entry.Author %></td>
+  </tr>
+  <tr>
+    <td><strong>Desc:</strong></td>
     <td><%= entry.Description %></td>
+  </tr>
+  <tr>
+    <td><strong>Tags:</strong></td>
     <td><%= entry.tags %></td>
+  </tr>
+  <tr>
     <td><%= link_to 'Show', entry %></td>
     <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
     <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,4 +32,3 @@
 
 <%= link_to 'New Entry', new_entry_path %>
 
-</div>
